@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+</head>
+<body>
+    <h1>Media Query Example</h1>
+    
+    <p>This text will change its font size and color based on the screen size.</p>
+    
+    <style>
+        @media screen and (max-width: 600px) {
+            p {
+                font-size: 18px;
+                color: red;
+            }
+        }
+        
+        @media screen and (min-width: 601px) {
+            p {
+                font-size: 24px;
+                color: blue;
+            }
+        }
+        
+        @media screen and (min-width: 1024px) {
+            p {
+                font-size: 30px;
+                color: green;
+            }
+        }
+    </style>
+    
+</body>
+</html>

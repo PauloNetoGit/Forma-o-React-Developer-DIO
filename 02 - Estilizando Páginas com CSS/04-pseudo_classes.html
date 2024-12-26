@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes</title>
+</head>
+<body>
+    <h2>:hover</h2>
+    <div class="quadrado">Quadrado</div>
+
+    <h2>:hover com cursor progress</h2>
+    <div class="quadradoP">Quadrado</div>
+
+    <h2>:focus com input</h2>
+    <input />
+
+    <h2>filho - Mudando o comportamento da primeira posição de um conjunto.</h2>
+    <p>.filho:nth-child(1):hover</p>
+    <div class="pai">
+        <div class="filho">a</div>
+        <div class="filho">b</div>
+        <div class="filho">c</div>
+    </div>
+
+    <style>
+        .quadrado, .quadradoP {
+            padding: 50px 30px;
+            border: none;
+            background-color: #96dee7;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: -16px;
+        }
+
+        .quadrado:hover {
+            background-color: #4577a0;
+        }
+
+        .quadradoP:hover {
+            background-color: #4577a0;
+            cursor: progress;
+        }
+
+        input:focus {
+            color: red;
+            background: white;
+        }
+
+        .filho {
+            background: #d665b0;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .filho:nth-child(1):hover {
+            background: rgb(218, 253, 89);
+        }
+    </style>
+    
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+</head>
+<body>
+    <h2>Alinhamento por coluna</h2>
+    <h4> Usando:<br><li>display: flex;</li><li>flex-direction: column;</li></h4>
+    <div class="alinhar-por-coluna">
+        <div class="box1">Box 1</div>
+        <div class="box2">Box 2</div>
+        <div class="box3">Box 3</div>
+    </div>
+
+    <h2>Alinhamento por linha</h2>
+    <h4> Usando:<br><li>display: flex;</li><li>flex-direction: row;</li></h4>
+    <div class="alinhar-por-linha">
+        <div class="newbox1">Box 4</div>
+        <div class="newbox2">Box 5</div>
+        <div class="newbox3">Box 6</div>
+    </div>
+
+    <h2>CSS Flexbox</h2>
+    <img src="img/CSS flexbox.png" width="600px">
+
+
+    <style>
+         .alinhar-por-coluna {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .box1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 5vh;
+            width: 10vh;
+            background-color: rgb(139, 212, 145);
+        }
+
+        .box2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 5vh;
+            width: 10vh;
+            background-color: rgb(139, 165, 212);
+        }
+
+        .box3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 5vh;
+            width: 10vh;
+            background-color: rgb(200, 139, 212);
+        }
+
+        .alinhar-por-linha {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .newbox1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 5vh;
+            width: 10vh;
+            background-color: rgb(139, 212, 145);
+        }
+
+        .newbox2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 5vh;
+            width: 10vh;
+            background-color: rgb(139, 165, 212);
+        }
+
+        .newbox3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 5vh;
+            width: 10vh;
+            background-color: rgb(200, 139, 212);
+        }
+    </style>
+    
+</body>
+</html>

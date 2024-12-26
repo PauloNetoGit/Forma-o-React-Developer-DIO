@@ -1,0 +1,13 @@
+/* seletor de tipo */
+h1 { }
+
+/* classe */
+.box { }
+
+/* id */
+#unique { }
+
+/* seletores de atributos */
+a[title] { }
+
+a[href="http://exemple.com"] { }
