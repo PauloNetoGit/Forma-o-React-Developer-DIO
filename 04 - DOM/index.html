@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Manipulação do DOM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+        #img_lampada {
+            width: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Exemplos de Manipulação do DOM</h1>
+    <h2>Ligar | desligar</h2>
+    <img id="img_lampada" src="./img/lampada_desligada.png" alt="">
+    <div>
+        <button id="ligar">Ligar</button>
+        <button id="desligar">Desligar</button>
+    </div>
+
+    <p id="paragraph">Este é um parágrafo de exemplo. Clique no botão abaixo para alterar o texto.</p>
+    <button id="changeTextBtn">Alterar Texto</button>
+
+
+    <h2>Adicionar um novo elemento</h2>
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+    <button id="addItemBtn">Adicionar Item</button>
+
+    <h2>Alterar estilo de um elemento</h2>
+    <p id="styleParagraph">Este parágrafo terá seu estilo alterado ao clicar no botão.</p>
+    <button id="changeStyleBtn">Alterar Estilo</button>
+
+    <script>
+        // Ligar e desligar Lâmpada
+        const ligar = document.getElementById('ligar');
+        const desligar = document.getElementById('desligar');
+
+        const lampada = document.getElementById('img_lampada')
+
+        function lampadaLigada() {
+            lampada.src = './img/lampada_ligada.png'
+        }
+
+        function lampadaDesligada() {
+            lampada.src = './img/lampada_desligada.png'
+        }
+
+        ligar.addEventListener('click', lampadaLigada );
+        desligar.addEventListener('click', lampadaDesligada)
+
+        // Seleção de um elemento pelo ID e alteração de seu texto
+        document.getElementById('changeTextBtn').addEventListener('click', function() {
+            const paragraph = document.getElementById('paragraph');
+            paragraph.textContent = "O texto foi alterado!"; // Altera o texto do parágrafo
+        });
+
+        // Adicionar um novo elemento (item de lista) dinamicamente
+        document.getElementById('addItemBtn').addEventListener('click', function() {
+            const list = document.getElementById('list');
+            const newItem = document.createElement('li'); // Cria um novo elemento <li>
+            newItem.textContent = `Item ${list.children.length + 1}`; // Define o texto do item
+            list.appendChild(newItem); // Adiciona o novo item à lista
+        });
+
+        // Alterar o estilo de um elemento
+        document.getElementById('changeStyleBtn').addEventListener('click', function() {
+            const styleParagraph = document.getElementById('styleParagraph');
+            styleParagraph.classList.toggle('highlight'); // Alterna a classe 'highlight'
+        });
+
+       
+    </script>
+</body>
+</html>
